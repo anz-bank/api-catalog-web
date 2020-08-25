@@ -1,65 +1,69 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div className="container">
+      <div className="sidebar--left">
+        <div className="logo sidebar--left__image-groups">
+          <img src="/images/sysl-logo.png" />
+          <span className="logo__title">API Catalog</span>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <div className="sidebar--left__button-groups">
+          <button className="btn--outline" type="button">
+            ADD API
+          </button>
+          <button className="btn--outline" type="button">
+            ABOUT
+          </button>
+          <button className="btn--outline" type="button">
+            FEEDBACK
+          </button>
+        </div>
+      </div>
+      <div className="main">
+        <div className="main__header">
+          <h1 className="main__h1">Welcome to the API Catalog!</h1>
+          <span>Search for a service or explore our system</span>
+        </div>
+        <div className="search__field">
+          <input
+            className="search__input"
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder=" "
+          />
+          <label className="search__label" htmlFor="fullname">
+            Search...
+          </label>
+        </div>
+        <div className="main__numberGroups">
+          <div className="numberCircleGroup">
+            <div className="numberCircle">
+              <span>256</span>
+            </div>
+            <p>Active Users</p>
+          </div>
+          <div className="numberCircleGroup">
+            <div className="numberCircle">
+              <span>29</span>
+            </div>
+            <p>Services</p>
+          </div>
+          <div className="numberCircleGroup">
+            <div className="numberCircle">
+              <span>76</span>
+            </div>
+            <p>Endpoints</p>
+          </div>
+        </div>
+      </div>
+      <div className="sidebar--right">
+        <button className="btn--outline" type="button">
+          EXPLORE
+        </button>
+      </div>
     </div>
-  )
+  );
 }

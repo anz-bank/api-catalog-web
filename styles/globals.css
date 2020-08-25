@@ -1,3 +1,8 @@
+/* variables */
+:root {
+  --sysl-color: #007dba;
+}
+
 html,
 body {
   padding: 0;
@@ -13,4 +18,163 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+.main {
+  flex: 1;
+  margin: 10rem 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+.main__header{
+  margin-bottom: 5rem
+}
+.main__h1{
+  font-size: 3em
+}
+.sidebar--left {
+  flex: 20%;
+  max-width:20%;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 95vh;
+}
+.sidebar--right {
+  flex: 20%;
+  max-width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 200px;
+}
+.logo > img {
+  width: 70px;
+}
+.logo__title {
+  display: block;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--sysl-color);
+}
+
+.btn--outline {
+  padding:1rem 2.5rem;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.sidebar--left__button-groups {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sidebar--left__image-groups{
+  position: absolute;
+  top: 0;
+}
+
+.numberCircle{
+  width: 120px;
+  line-height: 110px;
+  border-radius: 50%;
+  text-align: center;
+  border: 5px solid #60AED4;
+  color: #007DBA;
+  animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
+}
+
+.main__numberGroups{
+  display: flex;
+  justify-content: space-between;
+}
+.numberCircleGroup{
+  text-align: center;
+  color: #007DBA;
+}
+
+.search__field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 5rem
+}
+
+
+
+.search__label, .search__input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+.search__input {
+  font-size: 1.5em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: text;
+}
+
+.search__input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+.search__label {
+  line-height: 42px;
+  color: #9F9F9F;  
+  letter-spacing: 0.05em;
+}
+
+.search__input:placeholder-shown + .search__label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+/**
+* Show the placeholder when the search__input is focused.
+*/
+.search__input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the search__input at all.
+*/
+.search__input:not(:placeholder-shown) + .search__label,
+.search__input:focus + .search__label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
 }
