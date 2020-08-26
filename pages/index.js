@@ -1,7 +1,11 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Button from "../components/button";
+import Modal from "../components/modal";
+import React, { useState } from 'react';
 
 export default function Home() {
+  const [showModal, setshowModal] = useState(false)
   return (
     <div className="container">
       <div className="sidebar--left">
@@ -10,15 +14,9 @@ export default function Home() {
           <span className="logo__title">API Catalog</span>
         </div>
         <div className="sidebar--left__button-groups">
-          <button className="btn--outline" type="button">
-            ADD API
-          </button>
-          <button className="btn--outline" type="button">
-            ABOUT
-          </button>
-          <button className="btn--outline" type="button">
-            FEEDBACK
-          </button>
+          <Button>ADD API</Button>
+          <Button>ABOUT</Button>
+          <Button>FEEDBACK</Button>
         </div>
       </div>
       <div className="main">
@@ -30,14 +28,16 @@ export default function Home() {
           <input
             className="search__input"
             type="text"
-            name="fullname"
-            id="fullname"
+            name="search"
+            id="search"
             placeholder=" "
+            onClick={()=>setshowModal(true)}
           />
-          <label className="search__label" htmlFor="fullname">
+          <label className="search__label" htmlFor="search">
             Search...
           </label>
         </div>
+        <Modal show={showModal} onClose={()=>setshowModal(false)}  />
         <div className="main__numberGroups">
           <div className="numberCircleGroup">
             <div className="numberCircle">
@@ -60,9 +60,7 @@ export default function Home() {
         </div>
       </div>
       <div className="sidebar--right">
-        <button className="btn--outline" type="button">
-          EXPLORE
-        </button>
+        <Button>EXPLORE</Button>
       </div>
     </div>
   );
