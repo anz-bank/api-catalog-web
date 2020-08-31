@@ -28,7 +28,7 @@ export default function Modal(props) {
         <div className="modal-header">
         </div>
         <div className="modal-body">
-          <p>modal</p>
+          {props.children}
         </div>
       </div>
     </div>

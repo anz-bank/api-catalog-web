@@ -1,6 +1,8 @@
 import "normalize.css";
 import "../styles/globals.css";
 import Head from 'next/head';
+import '@fortawesome/fontawesome-free/js/all'
+
 
 function MyApp({ Component, pageProps }) {
   return (

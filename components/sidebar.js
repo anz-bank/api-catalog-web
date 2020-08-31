@@ -3,24 +3,35 @@ import MetisMenu from "react-metismenu";
 
 const content = [
   {
-    id: 1,
-    label: "Label of Item",
-    to: "#a-link",
-  },
-  {
-    id: 2,
-    icon: "icon-class-name",
-    label: "Second Item",
+    label: "Business Service",
+    to: "#ink",
     content: [
       {
-        id: 3,
-        label: "Sub Menu of Second Item",
+        label: "Contact Center",
+        to: "#another-link",
+      },
+      {
+        label: "Customer Relationship",
+        to: "#another-link",
+      },
+      {
+        label: "Document Management",
         to: "#another-link",
       },
     ],
   },
+  {
+    icon: "icon-class-name",
+    label: "Compliance Engineering",
+    to: "#b-link",
+  },
 ];
 
 export default function Sidebar() {
-  return <MetisMenu content={content}  className="sidebar--menu"/>;
+  return (
+    <div className="sidebar__container">
+      <h1>Root</h1>
+       <MetisMenu content={content} className="sidebar--menu"/>
+    </div>
+  );
 }

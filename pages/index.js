@@ -37,7 +37,9 @@ export default function Home() {
             Search...
           </label>
         </div>
-        <Modal show={showModal} onClose={()=>setshowModal(false)}  />
+        <Modal show={showModal} onClose={()=>setshowModal(false)}>
+          test
+        </Modal>
         <div className="main__numberGroups">
           <div className="numberCircleGroup">
             <div className="numberCircle">
