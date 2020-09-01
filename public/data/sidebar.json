@@ -1,0 +1,25 @@
+[
+    {
+      "label": "Business Service",
+      "to": "#ink",
+      "content": [
+        {
+          "label": "Contact Center",
+          "to": "#another-link",
+        },
+        {
+          "label": "Customer Relationship",
+          "to": "#another-link",
+        },
+        {
+          "label": "Document Management",
+          "to": "#another-link",
+        },
+      ],
+    },
+    {
+      "icon": "icon-class-name",
+      "label": "Compliance Engineering",
+      "to": "#b-link",
+    },
+  ]

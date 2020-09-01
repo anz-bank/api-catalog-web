@@ -1,8 +1,8 @@
-import Sidebar from "../components/sidebar";
-import Button from "../components/button";
-import Card from "../components/card";
+import Sidebar from "../../../../components/sidebar";
+import Button from "../../../../components/button";
+import Card from "../../../../components/card";
 
-export default function Package() {
+export default function Doc() {
   return (
     <div>
       <input id="menu-switch" type="checkbox"></input>
@@ -25,7 +25,7 @@ export default function Package() {
         ></label>
         <div className="package__main--container" role="main">
           <article>
-            <h2>Package</h2>
+            <h2>Documentation</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               malesuada sem nec porttitor fringilla. Vivamus molestie
